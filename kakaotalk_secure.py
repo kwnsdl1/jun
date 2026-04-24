@@ -27,7 +27,7 @@ def run():
             "__file__": os.path.join(script_dir, "kakaotalk.py"),
             "__builtins__": __builtins__,
         }
-        exec(decompressed, namespace)
+        exec(decompressed.decode('utf-8'), namespace)
     except Exception as e:
         import traceback
         error_msg = traceback.format_exc()
